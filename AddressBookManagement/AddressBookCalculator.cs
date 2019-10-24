@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace AddressBookManagement
@@ -9,17 +10,18 @@ namespace AddressBookManagement
 
         public int CountPerGender(Gender gender,IList<Contact> contacts)
         {
-            return 0;
+            return contacts.Where(contact => contact.Gender == gender).Count();
         }
 
         public Contact GetOldest(IList<Contact> contacts)
         {
-            return default(Contact);
+            return contacts.Max();
         }
 
         public int GetDaysBetween(Contact contact1,Contact contact2)
         {
-            return 0;
+            var days = (int)(contact1.BirthDate - contact2.BirthDate).TotalDays;
+            return Math.Abs(days);
         }
     }
 }
