@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AdressBookManagement
+namespace AddressBookManagement
 {
     class Program
     {
