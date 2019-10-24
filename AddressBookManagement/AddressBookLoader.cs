@@ -8,9 +8,16 @@ namespace AddressBookManagement
     public class AddressBookLoader : IAddressBookLoader
     {
         public string AddressBookFilePath { get; set; }
+        private IFileReader _fileReader;
+
+        public AddressBookLoader(IFileReader fileReader)
+        {
+            _fileReader = fileReader;
+        }
+
         public IList<Contact> GetAll()
         {
-            var lines = File.ReadAllLines(AddressBookFilePath);
+            var lines = _fileReader.GetAllLines(AddressBookFilePath);
             var contacts = new List<Contact>();
             foreach(var line in lines)
             {
