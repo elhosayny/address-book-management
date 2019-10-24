@@ -7,7 +7,7 @@ namespace AddressBookManagement
     public class Contact
     {
         public string Name { get; set; }
-        public string Gendre { get; set; }
+        public Gender Gender { get; set; }
         public DateTime BirthDate { get; set; }
     }
 }

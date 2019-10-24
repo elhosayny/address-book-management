@@ -50,7 +50,7 @@ namespace AddressBookManagement.Test
             var firstContact = contacts.First();
 
             Assert.Equal("John Snow", firstContact.Name);
-            Assert.Equal("Male", firstContact.Gendre);
+            Assert.Equal(Gender.Male, firstContact.Gender);
             Assert.Equal("16/03/77", firstContact.BirthDate.ToString("dd/MM/yy"));
         }
     }

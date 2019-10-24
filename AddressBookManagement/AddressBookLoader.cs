@@ -25,7 +25,7 @@ namespace AddressBookManagement
                 var newContact = new Contact()
                 {
                     Name = line.Split(',')[0],
-                    Gendre = line.Split(',')[1],
+                    Gender = line.Split(',')[1] == "Male" ? Gender.Male : Gender.Female,
                     BirthDate = DateTime.Parse(line.Split(',')[2])
                 };
                 contacts.Add(newContact);
