@@ -7,8 +7,9 @@ namespace AddressBookManagement
 {
     public class AddressBookLoader : IAddressBookLoader
     {
-        public string AddressBookFilePath { get; set; }
         private IFileReader _fileReader;
+
+        public string AddressBookFilePath { get; set; }
 
         public AddressBookLoader(IFileReader fileReader)
         {
@@ -19,7 +20,7 @@ namespace AddressBookManagement
         {
             var lines = _fileReader.GetAllLines(AddressBookFilePath);
             var contacts = new List<Contact>();
-            foreach(var line in lines)
+            foreach (var line in lines)
             {
                 var newContact = new Contact()
                 {
