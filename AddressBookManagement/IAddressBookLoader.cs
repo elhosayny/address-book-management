@@ -6,6 +6,7 @@ namespace AddressBookManagement
 {
     public interface IAddressBookLoader
     {
+        string AddressBookFilePath { get; set; }
         IList<Contact> GetAll();
     }
 }

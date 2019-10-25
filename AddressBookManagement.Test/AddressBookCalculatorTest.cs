@@ -10,7 +10,7 @@ namespace AddressBookManagement.Test
     public class AddressBookCalculatorTest
     {
         private IAddressBookLoader _addressBookLoader;
-        private AddressBookCalculator _addressBookCalculator;
+        private IAddressBookCalculator _addressBookCalculator;
         public AddressBookCalculatorTest()
         {
             var mock = new Mock<IAddressBookLoader>();

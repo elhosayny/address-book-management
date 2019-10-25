@@ -9,7 +9,7 @@ namespace AddressBookManagement.Test
 {
     public class AddressBookLoaderTest
     {
-        private AddressBookLoader _addressBookLoader;
+        private IAddressBookLoader _addressBookLoader;
 
         public AddressBookLoaderTest()
         {
